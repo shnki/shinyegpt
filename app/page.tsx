@@ -2,7 +2,6 @@ import Image from "next/image";
 import Head from "next/head";
 import Nav from "./components/nav";
 import Carousel from "./components/carousel";
-import { connectDatabase } from "./database/DB";
 export default function Home() {
   const testslides = ["/slide1.jpeg", "/slide2.jpg", "/slide3.jpeg"];
   return (
