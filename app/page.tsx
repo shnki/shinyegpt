@@ -12,11 +12,7 @@ export default function Home() {
       <Nav />
       <main className="container mx-auto mt-8">
         <div className="mx-20">
-          <Carousel
-            autoSlide={true}
-            autoSlideInterval={5000}
-            clasName="w-200 h-22"
-          >
+          <Carousel autoSlide={true} autoSlideInterval={5000}>
             {testslides.map((slide) => (
               <img key={slide} src={slide} alt="Slide" />
             ))}
