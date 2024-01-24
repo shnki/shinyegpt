@@ -6,11 +6,15 @@ import { addProduct } from "../actions";
 import React from "react";
 
 const Dashboard = () => {
-  const [state, formAction] = useFormState(addProduct, {
-    name: "",
-    details: "",
-    price: "",
-  });
+  const initalState = {
+    product: {
+      id: 0,
+      name: "",
+      details: "",
+      price: 0,
+    },
+  };
+  const [state, formAction] = useFormState(addProduct, initalState);
 
   useEffect(() => {
     console.log(state);

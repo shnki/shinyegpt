@@ -6,7 +6,7 @@ import { useEffect } from "react";
 
 const Admin = () => {
   const initalState = {
-    message: "",
+    token: "",
   };
   const [state, formAction] = useFormState(signInAdmin, initalState);
   useEffect(() => {

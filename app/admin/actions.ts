@@ -8,11 +8,11 @@ const prisma = new PrismaClient()
 export async function signInAdmin(prevState: any, formData: FormData) {
 
 
-    const email = formData.get("Email");
+    const email = String(formData.get("Email"))
     const password = String(formData.get("Password"))
     const user = await prisma.user.findUnique({
         where: {
-            email: email
+            email
         }
     })
     if (!user) {
@@ -23,7 +23,7 @@ export async function signInAdmin(prevState: any, formData: FormData) {
     console.log(hashedPassword)
     console.log("dataBase" + user.password)
 
-    const token = jwt.sign({ userId: user.id }, process.env.JWT_SECRET, {
+    const token = jwt.sign({ userId: user.id }, process.env.JWT_SECRET as string, {
         expiresIn: '3000h',
     });
 
@@ -37,9 +37,9 @@ export async function getProducts() {
 
 export async function addProduct(prevState: any, formData: FormData) {
     console.log(formData)
-    const name = formData.get("name")
-    const details = formData.get("details")
-    const price = parseInt(formData.get("price"), 10);
+    const name = String(formData.get("name"))
+    const details = String(formData.get("details"))
+    const price = parseInt(String(formData.get("price")), 10);
     const product = await prisma.product.create({
         data: {
             name: name,
@@ -61,7 +61,7 @@ export async function addProduct(prevState: any, formData: FormData) {
         ]
     })
     await saveFile([fileOne, fileTwo, fileThree, fileFour], `${product.id}`);
-    return "saved"
+    return { product }
 
 }
 
