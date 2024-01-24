@@ -11,7 +11,7 @@ export async function signInAdmin(prevState: any, formData: FormData) {
     const password = String(formData.get("Password"))
     const user = await prisma.user.findUnique({
         where: {
-            email: email
+            email: email as string
         }
     })
     if (!user) {
