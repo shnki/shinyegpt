@@ -7,22 +7,14 @@ const prisma = new PrismaClient()
 
 export async function signInAdmin(prevState: any, formData: FormData) {
 
+
     const email = formData.get("Email");
     const password = String(formData.get("Password"))
-    if (email !== null && email !== undefined) {
-        const user = await prisma.user.findUnique({
-            where: {
-                email: email as string // Assertion that email is not null or undefined
-            }
-        });
-
-        if (!user) {
-            throw new Error('User not found');
+    const user = await prisma.user.findUnique({
+        where: {
+            email: email
         }
-    } else {
-        throw new Error('Email is null or undefined'); // Handle the case where email is null or undefined
-    }
-
+    })
     if (!user) {
         throw new Error('User not found');
     }
