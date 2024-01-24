@@ -1,6 +1,5 @@
 "use server"
 import { PrismaClient } from "@prisma/client"
-import bcrypt from 'bcryptjs';
 import jwt from 'jsonwebtoken';
 import crypto from 'crypto';
 import { promises as fsPromises } from 'fs';
