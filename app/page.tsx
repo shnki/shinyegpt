@@ -2,6 +2,7 @@ import Image from "next/image";
 import Head from "next/head";
 import Nav from "./components/nav";
 import Carousel from "./components/carousel";
+import products from "../public/products.json";
 export default function Home() {
   const testslides = ["/slide1.jpeg", "/slide2.jpg", "/slide3.jpeg"];
   return (
@@ -19,6 +20,20 @@ export default function Home() {
           </Carousel>
         </div>
         <section className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {products.map((product) => (
+            <div key={product.id} className="bg-white p-4 rounded-md shadow-md">
+              <img
+                src="https://placekitten.com/400/300"
+                alt="Product 1"
+                className="w-full h-48 object-cover mb-4 rounded-md"
+              />
+              <h2 className="text-xl font-semibold mb-2">{product.name}</h2>
+              <p className="text-gray-600 mb-4">{product.details}</p>
+              <button className="bg-blue-500 text-white px-4 py-2 rounded-md">
+                Add to Cart
+              </button>
+            </div>
+          ))}
           {/* Product 1 */}
           <div className="bg-white p-4 rounded-md shadow-md">
             <img

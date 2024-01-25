@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "name": "Product 1",
+    "price": 19.99,
+    "details": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+  },
+  {
+    "id": 2,
+    "name": "Product 2",
+    "price": 29.99,
+    "details": "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+  },
+  {
+    "id": 3,
+    "name": "Product 3",
+    "price": 39.99,
+    "details": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+  }
+]
