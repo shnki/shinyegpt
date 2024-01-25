@@ -71,9 +71,9 @@ export async function addProduct(prevState: any, formData: FormData) {
     return {
         product: {
             id: 1,
-            name: name,
-            details: details,
-            price: price,
+            name: "name",
+            details: "details",
+            price: 0,
         }
     }
 
