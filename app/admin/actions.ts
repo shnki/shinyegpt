@@ -32,8 +32,8 @@ export async function signInAdmin(prevState: any, formData: FormData) {
     // const token = jwt.sign({ userId: user.id }, process.env.JWT_SECRET as string, {
     //     expiresIn: '3000h',
     // });
-
-    // return { token }
+    //
+    return { token: "token" }
 }
 
 export async function getProducts() {
@@ -67,7 +67,15 @@ export async function addProduct(prevState: any, formData: FormData) {
     //     ]
     // })
     // await saveFile([fileOne, fileTwo, fileThree, fileFour], `${product.id}`);
-    // return { product }
+
+    return {
+        product: {
+            id: 1,
+            name: name,
+            details: details,
+            price: price,
+        }
+    }
 
 }
 
