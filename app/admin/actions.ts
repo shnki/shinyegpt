@@ -9,8 +9,8 @@ export async function signInAdmin(prevState: any, formData: FormData) {
 
 
     const email = String(formData.get("Email"))
-    const password = String(formData.get("Password"))
-    const user = await prisma.user.findUnique({
+    const password = String(formData.get("password"))
+    const user = await prisma.user.findFirst({
         where: {
             email: email
         }
@@ -19,9 +19,15 @@ export async function signInAdmin(prevState: any, formData: FormData) {
         throw new Error('User not found');
     }
     const hashedPassword = crypto.createHash('sha256').update(password).digest('hex');
+    console.log("Email from form: " + email);
+    console.log("Password from form: " + password);
+    console.log("Hashed Password: " + hashedPassword);
+    console.log("Database Password: " + user.password);
     const isMatch = hashedPassword === user.password
-    console.log(hashedPassword)
-    console.log("dataBase" + user.password)
+
+    if (!isMatch) {
+        { return { token: null } }
+    }
 
     const token = jwt.sign({ userId: user.id }, process.env.JWT_SECRET as string, {
         expiresIn: '3000h',
