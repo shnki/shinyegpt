@@ -6,10 +6,10 @@ function ProductCard({
     id: number;
     name: string;
     price: number;
-    dir: string;
     details: string;
-    reviews: number;
     rating: number;
+    reviews: number;
+    dir: string;
   };
 }) {
   return (
