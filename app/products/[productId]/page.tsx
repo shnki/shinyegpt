@@ -6,6 +6,7 @@ export default function ProductDetails({
     productId: string;
   };
 }) {
+  const productId = parseInt(params.productId, 10) || 1;
   return (
     <div className="bg-gray-100 dark:bg-gray-800 py-8">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -33,10 +34,10 @@ export default function ProductDetails({
           </div>
           <div className="md:flex-1 px-4">
             <h2 className="text-2xl font-bold text-gray-800 dark:text-white mb-2">
-              {products[params.productId - 1].name}
+              {products[productId - 1].name}
             </h2>
             <h1 className="text-2xl font-bold text-gray-800 dark:text-white mb-2">
-              {products[params.productId - 1].price} EGP
+              {products[productId - 1].price} EGP
             </h1>
             <p className="text-gray-600 dark:text-gray-300 text-sm mb-4">
               {"product.description"}
