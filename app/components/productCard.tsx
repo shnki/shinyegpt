@@ -1,5 +1,17 @@
 import Link from "next/link";
-function ProductCard({ product }) {
+function ProductCard({
+  product,
+}: {
+  product: {
+    id: number;
+    name: string;
+    price: number;
+    dir: string;
+    details: string;
+    reviews: number;
+    rating: number;
+  };
+}) {
   return (
     <Link href={`/products/${product.id}`}>
       <div className="bg-white p-1 rounded-md shadow-md hover:shadow-xl ">
