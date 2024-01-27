@@ -12,13 +12,9 @@ export default function Home() {
         <title>ShinyEgypt</title>
       </Head>
       <Nav />
-      <main className="container mx-auto mt-8">
-        <div className="mx-20">
-          <Carousel autoSlide={true} autoSlideInterval={5000}>
-            {testslides.map((slide) => (
-              <img key={slide} src={slide} alt="Slide" />
-            ))}
-          </Carousel>
+      <main className="container mx-auto">
+        <div className="mb-20">
+          <img className="object-contain" src="/hero.jpeg" alt="Hero Image" />
         </div>
         <section className="grid grid-cols-2 m-5 md:grid-cols-2 md:my-5 lg:grid-cols-4 gap-2">
           {products.map((product) => (
@@ -30,6 +26,10 @@ export default function Home() {
       <footer className="bg-gray-800 text-white p-4 mt-8">
         <div className="container mx-auto">
           <p>&copy; 2024 My E-Commerce Store. All rights reserved.</p>
+          <br />
+          <a className="text-blue-500" href="/Privacy-Policy">
+            Privacy Policy
+          </a>
         </div>
       </footer>
     </div>
