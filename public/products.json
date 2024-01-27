@@ -1,20 +1,51 @@
 [
   {
     "id": 1,
-    "name": "Product 1",
+    "name": "حامل اللابتوب والتابلت المعدن",
     "price": 19.99,
-    "details": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+    "details": "A rich blend of Arabica and Robusta beans with a smooth taste.",
+    "rating": 4.5,
+    "reviews": 120,
+    "dir": "rtl"
   },
   {
     "id": 2,
-    "name": "Product 2",
-    "price": 29.99,
-    "details": "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+    "name": "Airpods JOYROOM JR-T03S 3",
+    "price": 500,
+    "details": "Immerse yourself in music with these premium noise-canceling headphones.",
+    "rating": 4.7,
+    "reviews": 320
   },
   {
     "id": 3,
-    "name": "Product 3",
-    "price": 39.99,
-    "details": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+    "name": "Airpods M90 Pro",
+    "price": 49.99,
+    "details": "Stay active and track your fitness goals with this advanced fitness tracker.",
+    "rating": 4.3,
+    "reviews": 220
+  },
+  {
+    "id": 4,
+    "name": "Smart watch X9 Ultra Black",
+    "price": 24.99,
+    "details": "Indulge in the finest assortment of gourmet chocolates from around the world.",
+    "rating": 4.8,
+    "reviews": 180
+  },
+  {
+    "id": 5,
+    "name": "Professional DSLR Camera",
+    "price": 899.99,
+    "details": "Capture stunning moments with this high-performance DSLR camera.",
+    "rating": 4.9,
+    "reviews": 450
+  },
+  {
+    "id": 6,
+    "name": "Ultra HD Smart TV",
+    "price": 599.99,
+    "details": "Experience crystal-clear visuals and smart features with this Ultra HD TV.",
+    "rating": 4.6,
+    "reviews": 280
   }
 ]
