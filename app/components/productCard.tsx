@@ -9,7 +9,7 @@ function ProductCard({
     details: string;
     rating: number;
     reviews: number;
-    dir: string;
+    dir?: string;
   };
 }) {
   return (
