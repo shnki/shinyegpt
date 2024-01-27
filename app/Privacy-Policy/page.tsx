@@ -29,8 +29,8 @@ const PrivacyPolicy = () => {
                 shinyegpt.vercel.app
               </a>
               , including any other media form, media channel, mobile website,
-              or mobile application related or connected thereto (collectively,
-              the "Site"). Please read this Privacy Policy carefully.
+              or mobile application related or connected thereto . Please read
+              this Privacy Policy carefully.
             </p>
             <br />
             <p className="text-gray-600 dark:text-gray-300 text-sm mb-8">
@@ -69,7 +69,7 @@ const PrivacyPolicy = () => {
             <p className="text-gray-600 dark:text-gray-300 text-sm mb-8">
               7. Changes to this Privacy Policy We may update our Privacy Policy
               from time to time. The updated version will be indicated by an
-              updated "Last updated" date, and we encourage you to review this
+              updated (28/01/2023) date, and we encourage you to review this
               Privacy Policy periodically.
             </p>
             <br />
