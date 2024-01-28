@@ -1,6 +1,4 @@
-import type { Config } from "tailwindcss";
-
-const config: Config = {
+const config = {
   content: [
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
@@ -9,10 +7,9 @@ const config: Config = {
   theme: {
     extend: {
       animation: {
-        fade: 'fadeIn .5s ease-in-out',
-        fadeAndSlideIn: 'fadeAndSlideIn .5s ease-in-out',
-        fadeInFromBottom: 'fadeInFromBottom .5s ease-in-out',
-
+        fade: "fadeIn .5s ease-in-out",
+        fadeAndSlideIn: "fadeAndSlideIn .5s ease-in-out",
+        fadeInFromBottom: "fadeInFromBottom .5s ease-in-out",
       },
 
       keyframes: {
@@ -21,14 +18,13 @@ const config: Config = {
           to: { opacity: 1 },
         },
         fadeAndSlideIn: {
-          '0%': { opacity: 0, transform: 'translateX(-20px)' }, // Move from left
-          '100%': { opacity: 1, transform: 'translateX(0)' },   // Fade in
+          "0%": { opacity: 0, transform: "translateX(-20px)" }, // Move from left
+          "100%": { opacity: 1, transform: "translateX(0)" }, // Fade in
         },
         fadeInFromBottom: {
-          '0%': { opacity: 0, transform: 'translateY(20px)' }, // Move from bottom
-          '100%': { opacity: 1, transform: 'translateY(0)' },  // Fade in
+          "0%": { opacity: 0, transform: "translateY(20px)" }, // Move from bottom
+          "100%": { opacity: 1, transform: "translateY(0)" }, // Fade in
         },
-
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
