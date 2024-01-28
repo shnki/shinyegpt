@@ -12,7 +12,7 @@ export default function ProductDetails({
   return (
     <div>
       <Nav />
-      <div className="bg-gray-100 dark:bg-slate-50 py-20 ">
+      <div className="animate-fade bg-gray-100 dark:bg-slate-50 py-20">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 border rounded-2xl shadow-xl">
           <div className="flex flex-col md:flex-row -mx-4">
             <div className="md:flex-1 px-4">

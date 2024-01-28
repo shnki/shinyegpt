@@ -15,20 +15,22 @@ function ProductCard({
 }) {
   return (
     <Link href={`/products/${product.id}`}>
-      <div className="bg-white p-1 rounded-md shadow-md hover:shadow-xl ">
+      <div className="bg-white p-1 min-h-16 rounded-md shadow-md hover:shadow-xl ">
         <Image
           width={350}
-          height={400}
+          height={500}
           objectFit="contain"
           src={`/${product.id}-0.png`}
           alt={product.name}
           className="w-full h-48 mb-4 rounded-md"
         />
-        <h1 className="text-sm m-2">{product.price} EGP</h1>
+        <h1 className="text-sm m-2 truncate">{product.price} EGP</h1>
         <h2
           className={`text-sm ${
             product.dir === "rtl" ? "text-right" : "text-left"
-          } m-2 `}
+          } m-2 
+          truncate
+          `}
         >
           {product.name}
         </h2>
