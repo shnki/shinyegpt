@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 function ProductCard({
   product,
 }: {
@@ -15,7 +16,10 @@ function ProductCard({
   return (
     <Link href={`/products/${product.id}`}>
       <div className="bg-white p-1 rounded-md shadow-md hover:shadow-xl ">
-        <img
+        <Image
+          width={350}
+          height={400}
+          objectFit="contain"
           src={`/${product.id}-0.png`}
           alt={product.name}
           className="w-full h-48 mb-4 rounded-md"
