@@ -2,8 +2,8 @@ const Nav: React.FC = () => {
   return (
     <nav>
       <div className="navbar bg-base-100">
-        <div className="flex-1">
-          <a className="btn btn-ghost text-white text-xl">daisyUI</a>
+        <div className="flex-1 mx-5">
+          <img width={150} src="/shinylogo.svg" alt="logo" />
         </div>
         <div className="flex-none gap-2">
           <div className="form-control">
