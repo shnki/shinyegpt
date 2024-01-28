@@ -4,7 +4,6 @@ import Nav from "./components/nav";
 import Carousel from "./components/carousel";
 import products from "../public/products.json";
 import ProductCard from "./components/productCard";
-import Logo from "./Logo";
 
 export default function Home() {
   const testslides = ["/slide1.jpeg", "/slide2.jpg", "/slide3.jpeg"];
@@ -17,7 +16,7 @@ export default function Home() {
       <main className="container mx-auto">
         <div className="mb-20">
           <div className="bg-gradient-to-b from-pink-600 to-indigo-800 py-16 text-center text-white">
-            <h1 className="text-4xl font-bold mb-4">Your Hero Heading</h1>
+            <h1 className="text-4xl font-bold mb-4">ZOPR</h1>
             <p className="text-lg">Your hero subheading or call-to-action.</p>
             {/* Add more content as needed */}
           </div>
