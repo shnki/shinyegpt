@@ -18,7 +18,7 @@ export default function ProductDetails({
             <div className="md:flex-1 px-4">
               <div className="h-[450px] rounded-lg bg-black dark:bg-gray-700 mb-4">
                 <img
-                  className="w-full h-full object-cover rounded-lg"
+                  className="w-full h-full rounded-lg"
                   src={`/${params.productId}-0.png`}
                   alt="Product Image"
                 />
