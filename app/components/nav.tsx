@@ -1,4 +1,23 @@
+"use client";
+import { useRef, useState } from "react";
+import products from "../../public/products.json";
 const Nav: React.FC = () => {
+  const [query, setQuery] = useState<string>("");
+  const [results, setResults] = useState([]);
+
+  const handleSearch = (e: React.ChangeEvent<HTMLInputElement>) => {
+    if (e.target.value === "") {
+      setQuery(e.target.value);
+      setResults([]);
+    } else {
+      setQuery(e.target.value);
+      const filteredResults = products.filter((product) =>
+        product.name.toLowerCase().includes(e.target.value.toLowerCase())
+      );
+      setResults(filteredResults);
+      console.log(filteredResults);
+    }
+  };
   return (
     <nav>
       <div className="navbar bg-base-100 justify-between">
@@ -11,10 +30,25 @@ const Nav: React.FC = () => {
         <div className="flex-none gap-2">
           <div className="form-control">
             <input
+              onChange={handleSearch}
               type="text"
               placeholder="Search"
-              className="input input-bordered w-24 md:w-auto"
+              value={query}
+              className="text-cyan-50  input input-bordered w-24 md:w-auto"
             />
+            {results.length > 0 && (
+              <div className="absolute right-5 mt-12 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 p-1 space-y-1">
+                {results.map((product) => (
+                  <a
+                    key={product.id}
+                    href={`/products/${product.id}`}
+                    className="block px-4 py-2  text-gray-700 hover:bg-gray-100 truncate active:bg-blue-100 cursor-pointer rounded-md"
+                  >
+                    {product.name}
+                  </a>
+                ))}
+              </div>
+            )}
           </div>
           <div className="dropdown dropdown-end">
             <div
