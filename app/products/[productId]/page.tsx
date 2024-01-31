@@ -16,7 +16,7 @@ export default function ProductDetails({
   useEffect(() => {
     if (localStorage.getItem("cart") !== null) {
       setisAddedToCart(
-        localStorage.getItem("cart")?.includes(params.productId)
+        localStorage.getItem("cart")?.includes(params.productId) ?? false
       );
     }
   }, []);
