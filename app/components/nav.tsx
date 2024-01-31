@@ -1,9 +1,19 @@
 "use client";
 import { useRef, useState } from "react";
 import products from "../../public/products.json";
+interface Product {
+  id: number;
+  name: string;
+  price: number;
+  details: string;
+  rating: number;
+  reviews: number;
+  dir?: string; // Assuming this property is optional
+}
+
 const Nav: React.FC = () => {
   const [query, setQuery] = useState<string>("");
-  const [results, setResults] = useState([]);
+  const [results, setResults] = useState<Product[]>([]);
 
   const handleSearch = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (e.target.value === "") {
